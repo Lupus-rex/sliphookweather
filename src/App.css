@@ -1,5 +1,23 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("./components/images/sealife.jpg");
+  /* /  nd image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based
+       on the container's size */
+  background-size: cover;
+  /* Set a background color that will be displayed
+       while the background image is loading */
+  background-color: #464646;
+  color: white;
 }
 
 .App-logo {
@@ -15,7 +33,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +53,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  flex-grow: 1;
+  text-align: center;
+  padding: 25px;
+}
+footer {
+  padding: 2px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #464646;
+  font-size: small;
+  text-align: center;
+}
+header {
+  padding: 25px;
 }
